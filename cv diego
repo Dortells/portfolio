@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon CV - Diego Ortells</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    /* ✅ Fond sur html pour couvrir tout le contenu */
+    html {
+      min-height: 100%;
+      background: url("image1.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      color: #ffffff;
+      min-height: 100%;
+      background: none; /* body transparent pour laisser passer le fond du html */
+    }
+
+    /* ✅ Navbar + effet ombre */
+    .navbar {
+      background-color: rgba(0, 0, 80, 0.8);
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-item {
+      color: #ffffff !important;
+    }
+
+    /* ✅ Bande bleue du titre */
+    .header-banner {
+      background-color: #004aad;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      border-radius: 0 0 15px 15px;
+    }
+
+    /* ✅ Cadre texte même couleur que bande bleue */
+    .content {
+      background: rgba(0, 74, 173, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 900px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    h1, p {
+      color: #ffffff !important;
+      margin-bottom: 15px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    #expérience-professionnelle section,
+    #formation section {
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Accueil</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header-banner">
+    <b class="is-size-3">Mon CV</b>
+  </div>
+
+  <section class="content">
+
+    <section id="présentation">
+      <h1>Présentation</h1>
+      <p>Étudiant en BTS SIO option SISR, je possède des compétences solides en systèmes et réseaux ainsi qu'en développement web. Curieux et passionné par les technologies numériques, je cherche à renforcer mes compétences dans un environnement professionnel stimulant.</p>
+    </section>
+
+    <section id="expérience-professionnelle">
+      <section id="stage-second">
+        <h1 id="nom-entreprise">Exense Solution</h1>
+        <p id="lieu">3 Avenue du Pacifique, 91940 Les Ulis</p>
+        <p id="période-d'activité">De juillet 2022 à août 2022</p>
+        <p id="intitulé-du-poste">Technicien front-end</p>
+        <p id="principale-mission">J'assistais un technicien front-end lors du processus de création d'une plaque de diodes.</p>
+      </section>
+
+      <section id="stage-première">
+        <h1 id="nom-entreprise">APF France Handicap</h1>
+        <p id="lieu">17 Boulevard Auguste Blanqui, 75013 Paris</p>
+        <p id="période-d'activité">De juillet 2023 à août 2023</p>
+        <p id="intitulé-du-poste">Assistant technicien IT</p>
+        <p id="principale-mission">J'assistais les membres de l'équipe IT dans diverses tâches.</p>
+      </section>
+
+      <section id="stage-terminal">
+        <h1 id="nom-entreprise">Exense Solution</h1>
+        <p id="lieu">3 Avenue du Pacifique, 91940 Les Ulis</p>
+        <p id="période-d'activité">De décembre 2023 à janvier 2024</p>
+        <p id="intitulé-du-poste">Assistant technicien IT</p>
+        <p id="principale-mission">J'assistais les membres de l'équipe IT dans diverses tâches.</p>
+      </section>
+    </section>
+
+    <section id="formation">
+      <section id="bts">
+        <h1>BTS SIO (Services Informatiques aux Organisations)</h1>
+        <p id="spécialisation">Solutions d'infrastructure, systèmes et réseaux (SISR)</p>
+        <p id="lieu">Lycée Parc de Vilgénis</p>
+        <p id="début">Septembre 2024</p>
+        <p id="fin">En cours</p>
+      </section>
+
+      <section id="bac">
+        <h1>Bac Pro SN (Systèmes Numériques)</h1>
+        <p id="spécialisation">Option Réseaux Informatiques et Systèmes Communicants (RISC)</p>
+        <p id="lieu">Lycée Parc de Vilgénis</p>
+        <p id="début">Septembre 2022</p>
+        <p id="fin">Août 2024</p>
+        <p id="mention">Mention Bien</p>
+      </section>
+    </section>
+
+    <section id="projet">
+      <h1>Projet</h1>
+      <p>Mon objectif est de rejoindre une petite ou moyenne entreprise dans le domaine informatique, afin de travailler sur différents aspects, tels que la gestion des réseaux, la maintenance des systèmes et le développement web.</p>
+    </section>
+
+    <section id="compétences">
+      <h1>Compétences</h1>
+      <p>Gestion des systèmes et infrastructures réseau</p>
+      <p>Maîtrise des langages HTML, CSS, PHP, Python</p>
+      <p>Maîtrise des logiciels bureautiques</p>
+    </section>
+
+    <section id="centres-d'intérêt">
+      <h1>Centres d'intérêt</h1>
+      <p>Tout support numérique : veille technologique, développement informatique et nouvelles technologies</p>
+    </section>
+
+  </section>
+</body>
+</html>
