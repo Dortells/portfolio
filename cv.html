@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CV - Diego Ortells</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  <style>
+    :root {
+      --blue: #007BFF;
+      --blue-dark: #1e3a8a;
+      --bg: #f8f9fb;
+      --text: #333;
+      --light-blue: #e6f0ff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR STANDARDISÉE */
+    .site-nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 28px;
+      background:#fff;
+      box-shadow: 0 6px 18px rgba(30,58,138,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-links {
+      display:flex; gap:18px; list-style:none; margin:0; padding:0;
+    }
+    .nav-links a {
+      color:var(--text); text-decoration:none; font-weight:600; transition: color 0.2s;
+    }
+    .nav-links a:hover { color:var(--blue-dark); }
+
+    /* --- HEADER DU CV --- */
+    .cv-header {
+      background: #fff;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      border-top: 6px solid var(--blue);
+    }
+    .cv-name {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+    .cv-role {
+      font-size: 20px;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cv-intro {
+      color: #555;
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+    }
+    .contact-info a { color: var(--blue-dark); text-decoration: none; }
+
+    /* --- BLOCS PRINCIPAUX --- */
+    .section-block {
+      background: #fff;
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    .left-border { border-left: 5px solid var(--blue); }
+    .right-border { border-right: 5px solid var(--blue); }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* --- SKILLS GRID & BUTTON --- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .skill-category h4 {
+      font-size: 16px;
+      color: var(--blue-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      background: #f4f6f8;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid #e1e4e8;
+    }
+    .skill-tag.highlight {
+      background: var(--light-blue);
+      color: var(--blue-dark);
+      border-color: var(--blue-dark);
+      font-weight: 700;
+    }
+
+    /* STYLE DU BOUTON E4 */
+    .btn-download-e4 {
+      background-color: var(--blue);
+      color: white !important;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-download-e4:hover {
+      background-color: var(--blue-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 56, 123, 0.3);
+    }
+
+    /* --- TIMELINE --- */
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 25px;
+      border-left: 3px solid #eee;
+    }
+    .job-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .company {
+      font-weight: 600;
+      color: var(--blue);
+      font-size: 16px;
+    }
+    .date-badge {
+      display: inline-block;
+      background: var(--light-blue);
+      color: var(--blue-dark);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .job-desc {
+      margin-top: 8px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    /* --- INTÉRÊTS --- */
+    .hobby-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .hobby-icon {
+      font-size: 24px;
+      width: 40px;
+      text-align: center;
+    }
+   
+    @media (max-width: 600px) {
+      .cv-header { padding: 25px; }
+      .cv-name { font-size: 28px; }
+      .contact-info { flex-direction: column; gap: 5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div style="font-weight:700;color:var(--blue-dark);font-size:20px;">Diego Ortells</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html" style="color:var(--blue);">Mon CV</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   
+    <section class="cv-header">
+      <div class="cv-name">Diego Ortells</div>
+      <div class="cv-role">Administrateur Systèmes & Réseaux</div>
+     
+      <p class="cv-intro">
+        Étudiant en BTS SIO (SISR) passionné par l'infrastructure et la cybersécurité. [cite: 8]
+        Fort de mes expériences chez Exense Solution, je maîtrise la gestion de projets techniques comme le PCA et la centralisation des logs.
+      </p>
+
+      <div class="contact-info">
+        <span>📍 Paris / Île-de-France</span>
+        <span>📧 <a href="mailto:ortells.diego@gmail.com">ortells.diego@gmail.com</a></span>
+        <span>📞 06 51 76 47 71</span>
+      </div>
+    </section>
+
+    <section class="section-block right-border">
+      <div class="section-title">🛠️ Compétences Techniques</div>
+     
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Administration & Réseau</h4>
+          <div class="tag-container">
+            <span class="skill-tag highlight">Active Directory</span>
+            <span class="skill-tag highlight">Windows Server</span>
+            <span class="skill-tag">DHCP / DNS</span>
+            <span class="skill-tag">Stormshield (Firewall)</span>
+            <span class="skill-tag">GLPI</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Sécurité & Infrastructures</h4>
+          <div class="tag-container">
+            <span class="skill-tag highlight">PCA / PRA</span>
+            <span class="skill-tag highlight">Virtualisation (VMware)</span>
+            <span class="skill-tag">Syslog / Monitoring</span>
+            <span class="skill-tag">Sauvegardes</span>
+          </div>
+        </div>
+       
+        <div class="skill-category">
+          <h4>Dev & Outils</h4>
+          <div class="tag-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML / CSS</span>
+            <span class="skill-tag">PowerShell</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+
+        <div style="grid-column: 1 / -1; display: flex; justify-content: center; margin-top: 30px;">
+          <a href="tableau_epreuve-e4.pdf" download="Tableau_Synthese_E4_ORTELLS.pdf" class="btn-download-e4">
+            📄 Télécharger mon Tableau de Synthèse (E4)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block left-border">
+      <div class="section-title">💼 Expériences Professionnelles</div>
+
+      <div class="timeline-item">
+        <div class="job-title">Stagiaire Administrateur Système (PCA)</div>
+        <div class="company">Exense Solution</div>
+        <div class="date-badge">Nov 2024 - Jan 2025</div>
+        <p class="job-desc">
+          Mise en place d'un <strong>Plan de Continuité d'Activité</strong>. Configuration d'un environnement de secours et réplication de données.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="job-title">Stagiaire Administrateur Système (Logs)</div>
+        <div class="company">Exense Solution</div>
+        <div class="date-badge">Juil 2024 - Août 2024</div>
+        <p class="job-desc">
+          Déploiement d'une solution <strong>Syslog</strong> pour la centralisation des logs et monitoring du parc.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="job-title">Assistant Technicien IT</div>
+        <div class="company">Exense Solution</div>
+        <div class="date-badge">Déc 2023 - Jan 2024</div>
+        <p class="job-desc">
+          Installation d'un serveur de fichiers et support utilisateur N1/N2.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-block right-border">
+      <div class="section-title">🎓 Formation</div>
+     
+      <div class="timeline-item">
+        <div class="job-title">BTS SIO Option SISR</div>
+        <div class="company">Lycée Parc de Vilgénis</div>
+        <div class="date-badge">Sept 2024 — En cours</div>
+        <p class="job-desc">Solutions d'Infrastructure, Systèmes et Réseaux. [cite: 6, 8]</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="job-title">Bac Pro SN (RISC) - Mention Bien</div>
+        <div class="company">Lycée Parc de Vilgénis</div>
+        <div class="date-badge">Obtenu en 2024</div>
+      </div>
+    </section>
+
+    <section class="section-block left-border">
+      <div class="section-title">🌟 Centres d'intérêt</div>
+     
+      <div class="hobby-item">
+        <div class="hobby-icon">🏉</div>
+        <div><strong>Rugby (Compétition)</strong></div>
+      </div>
+
+      <div class="hobby-item">
+        <div class="hobby-icon">💻</div>
+        <div><strong>Veille Technologique (Hardware/IA)</strong></div>
+      </div>
+    </section>
+
+    <section id="contact" style="text-align:center; margin-bottom:40px; color:#666;">
+      <p>Besoin d'informations complémentaires ? <a href="mailto:ortells.diego@gmail.com" style="color:var(--blue); font-weight:bold;">Me contacter</a></p>
+    </section>
+
+  </main>
+
+</body>
+</html>

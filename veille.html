@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique – Diego Ortells</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  <style>
+    :root {
+      --blue: #007BFF;
+      --blue-dark: #1e3a8a;
+      --bg: #f8f9fb;
+      --text: #333;
+      --light-blue: #e6f0ff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR STANDARDISÉE */
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(30,58,138,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue-dark); }
+
+    /* --- HEADER VEILLE (Style CV) --- */
+    .veille-header {
+      background: #fff;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      border-top: 6px solid var(--blue);
+    }
+    .page-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+    }
+    .page-subtitle {
+      font-size: 18px;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- BLOCS DE CONTENU --- */
+    .section-block {
+      background: #fff;
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    /* BORDURES ALTERNÉES */
+    .left-border { border-left: 5px solid var(--blue); }
+    .right-border { border-right: 5px solid var(--blue); }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    /* --- BADGES OUTILS --- */
+    .tools-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .tool-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f4f6f8;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      color: var(--blue-dark);
+      border: 1px solid #e1e4e8;
+    }
+    .tool-badge span { font-size: 18px; }
+
+    /* --- TIMELINE DES ANALYSES (EXEMPLES) --- */
+    .analysis-timeline {
+      margin-top: 20px;
+    }
+    .analysis-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      border-left: 3px solid var(--blue);
+    }
+    .analysis-item:last-child { margin-bottom: 0; }
+   
+    .analysis-date {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 5px;
+    }
+    .analysis-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .analysis-source {
+      display: inline-block;
+      font-size: 12px;
+      background: var(--light-blue);
+      color: var(--blue-dark);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .analysis-content {
+      background: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #555;
+      border: 1px solid #eee;
+    }
+    .analysis-content strong { color: var(--blue-dark); }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .veille-header { padding: 25px; }
+      .page-title { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div style="font-weight:700;color:var(--blue-dark);font-size:20px;">Diego Ortells</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">Mon CV</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="veille.html" style="color:var(--blue);">Veille</a></li> <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="veille-header">
+    <h1 class="page-title">Veille Technologique</h1>
+    <p class="page-subtitle">
+      Sujet : <strong>L'optimisation graphique par l'IA (Upscaling & Frame Generation)</strong><br>
+      Comment l'intelligence artificielle redéfinit la performance matérielle et les compromis visuels.
+    </p>
+  </section>
+
+  <section class="section-block left-border">
+    <div class="section-title">📡 Ma Méthodologie & Outils</div>
+    <p>
+      Pour rester à jour sur les technologies GPU et l'IA (DLSS, FSR, PSSR), j'utilise un flux d'informations automatisé qui me permet de croiser les sources techniques.
+    </p>
+   
+    <div class="tools-container">
+      <div class="tool-badge"><span>🔔</span> Google Alerts</div>
+      <div class="tool-badge"><span>📰</span> Feedly (RSS)</div>
+      <div class="tool-badge"><span>📺</span> YouTube Tech (Digital Foundry)</div>
+      <div class="tool-badge"><span>🐦</span> Twitter / X (Leakers Hardware)</div>
+    </div>
+  </section>
+
+  <section class="section-block right-border">
+    <div class="section-title">📝 Journal de Bord : Mes dernières analyses</div>
+    <p style="margin-bottom:25px; color:#666; font-style:italic;">
+      Voici une sélection d'articles et de cas concrets que j'ai analysés récemment, illustrant les défis de l'IA dans le rendu graphique.
+    </p>
+
+    <div class="analysis-timeline">
+
+      <div class="analysis-item">
+        <div class="analysis-date">Janvier 2025</div>
+        <div class="analysis-title">Le PSSR de la PS5 Pro : Quand l'IA "hallucine"</div>
+        <span class="analysis-source">Source : Digital Foundry / Eurogamer</span>
+       
+        <div class="analysis-content">
+          <strong>Le fait :</strong> Lors de tests sur des jeux récents, la technologie d'upscaling PSSR de Sony a provoqué des artefacts visuels (scintillements sur les surfaces réfléchissantes) que le rendu natif n'avait pas.<br><br>
+          <strong>Mon analyse :</strong> Cela démontre que l'IA, bien que puissante pour augmenter le framerate, peut mal interpréter certaines données graphiques complexes. En tant que technicien, cela souligne l'importance de ne pas se reposer uniquement sur l'optimisation logicielle pour pallier un manque de puissance brute.
+        </div>
+      </div>
+
+      <div class="analysis-item">
+        <div class="analysis-date">Novembre 2024</div>
+        <div class="analysis-title">Nvidia DLSS 3.5 & Ray Reconstruction</div>
+        <span class="analysis-source">Source : Tom's Hardware</span>
+       
+        <div class="analysis-content">
+          <strong>Le fait :</strong> Nvidia a introduit le "Ray Reconstruction", une IA qui remplace les "denoisers" manuels pour améliorer la qualité du Ray Tracing sans perte de performance.<br><br>
+          <strong>Mon analyse :</strong> C'est une évolution majeure. On passe d'une IA qui "agrandit" l'image (Upscale) à une IA qui "nettoie" l'image. Cela prouve que l'avenir des cartes graphiques réside dans les Tensor Cores (unités IA) plutôt que dans la fréquence d'horloge pure.
+        </div>
+      </div>
+
+      <div class="analysis-item">
+        <div class="analysis-date">Septembre 2024</div>
+        <div class="analysis-title">AMD FSR vs Nvidia DLSS : L'approche logicielle vs matérielle</div>
+        <span class="analysis-source">Source : Les Numériques</span>
+       
+        <div class="analysis-content">
+          <strong>Le fait :</strong> Comparatif entre le FSR (ouvert, sans IA dédiée) et le DLSS (fermé, puces IA dédiées). Le FSR reste accessible mais souffre de plus de "ghosting" (images fantômes).<br><br>
+          <strong>Mon analyse :</strong> Pour un administrateur parc, cela pose la question de la pérennité du matériel. Faut-il investir dans du matériel propriétaire coûteux (Nvidia) ou des solutions ouvertes (AMD) ? La qualité visuelle du DLSS semble pour l'instant justifier le surcoût matériel.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-block left-border">
+    <div class="section-title">🚀 Impact Professionnel (B1.6)</div>
+    <p>
+      Cette veille me permet de comprendre que la puissance brute ne fait plus tout. Dans mon futur métier d'administrateur, cela m'aidera à :
+    </p>
+    <ul style="list-style:disc; margin-left:20px; color:#444;">
+      <li style="margin-bottom:8px;">Mieux conseiller sur le <strong>choix du matériel</strong> (Workstations graphiques, serveurs VDI).</li>
+      <li style="margin-bottom:8px;">Comprendre les besoins en <strong>bande passante et latence</strong> induits par ces technologies de streaming/cloud gaming.</li>
+      <li>Anticiper l'intégration de puces IA (NPU) dans les PC bureautiques standards (PC AI).</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 — Portfolio de Diego Ortells
+  </footer>
+
+</body>
+</html>
+

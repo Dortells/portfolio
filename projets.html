@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Bloc 1 – Diego Ortells</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  <style>
+    :root {
+      --blue: #007BFF;
+      --blue-dark: #1e3a8a;
+      --bg: #f8f9fb;
+      --text: #333;
+      --light-blue: #e6f0ff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR STANDARDISÉE */
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(30,58,138,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue-dark); }
+
+    /* --- HEADER PORTFOLIO (Style CV) --- */
+    .portfolio-header {
+      background: #fff;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      border-top: 6px solid var(--blue);
+    }
+    .page-title {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--blue-dark);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .page-subtitle {
+      font-size: 18px;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* --- BLOCS SITUATIONS --- */
+    .section-block {
+      background: #fff;
+      max-width: 900px;
+      margin: 30px auto; /* Espacement augmenté */
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      position: relative;
+    }
+
+    /* Bordures alternées */
+    .left-border { border-left: 5px solid var(--blue); }
+    .right-border { border-right: 5px solid var(--blue); }
+
+    /* En-tête de la situation */
+    .sit-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .sit-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+    .sit-context-badge {
+      background: var(--light-blue);
+      color: var(--blue-dark);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Corps de la situation */
+    .sit-section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-top: 15px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .sit-text {
+      color: #444;
+      font-size: 15px;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    .sit-text ul { margin-left: 20px; list-style-type: disc; }
+
+    /* --- BADGES COMPÉTENCES --- */
+    .skills-container {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px dashed #eee;
+    }
+    .skills-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .tags-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag {
+      background: var(--blue-dark);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .portfolio-header { padding: 25px; }
+      .sit-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div style="font-weight:700;color:var(--blue-dark);font-size:20px;">Diego Ortells</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">Mon CV</a></li>
+        <li><a href="projets.html" style="color:var(--blue);">Projets</a></li> <li><a href="veille.html">Veille</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="portfolio-header">
+    <h1 class="page-title">Portfolio Bloc 1 (SISR)</h1>
+    <p class="page-subtitle">
+      Situations professionnelles vécues en stage et en projet, validant les compétences du BTS SIO.
+    </p>
+  </section>
+
+  <div class="section-block right-border">
+    <div class="sit-header">
+      <div class="sit-title">Mise en place d'un Plan de Continuité (PCA)</div>
+      <div class="sit-context-badge">🏢 Exense · Hiver 2024/25</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte & Problématique</div>
+    <p class="sit-text">
+      L'entreprise souhaitait garantir la résilience de ses services critiques en cas d'incident majeur (panne serveur, sinistre). L'objectif était de réduire le temps d'interruption et d'assurer une reprise rapide.
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <p class="sit-text">
+      J'ai configuré un environnement de <strong>virtualisation (VMware)</strong> de secours. J'ai mis en place des mécanismes de <strong>réplication</strong> des machines virtuelles critiques et scripté les procédures de bascule (failover) pour valider que le système de secours prenait bien le relais.
+    </p>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      Le PCA est fonctionnel. Les tests de bascule ont été validés, garantissant la continuité des services essentiels en cas de panne du site principal.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.5 Déploiement d'un service</span>
+        <span class="skill-tag">B1.1 Gérer le patrimoine</span>
+        <span class="skill-tag">B1.4 Mode projet</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block left-border">
+    <div class="sit-header">
+      <div class="sit-title">Centralisation des Logs & Monitoring</div>
+      <div class="sit-context-badge">🏢 Exense · Été 2024</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte & Problématique</div>
+    <p class="sit-text">
+      Pour améliorer la sécurité et la maintenance, l'entreprise avait besoin de centraliser les journaux d'événements (logs) de ses différents équipements, dispersés et difficiles à analyser.
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <p class="sit-text">
+      J'ai déployé un serveur de <strong>centralisation de logs</strong> (Syslog). J'ai configuré les routeurs, switchs et serveurs pour renvoyer leurs logs vers ce point central. J'ai créé des <strong>dashboards</strong> pour visualiser les alertes en temps réel.
+    </p>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      L'équipe IT dispose maintenant d'une vision globale. La détection d'anomalies est plus rapide et proactive.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.2 Résolution d'incidents</span>
+        <span class="skill-tag">B1.1 Gérer le patrimoine</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block right-border">
+    <div class="sit-header">
+      <div class="sit-title">Serveur de Fichiers Sécurisé</div>
+      <div class="sit-context-badge">🏢 Exense · Hiver 2023</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte & Besoin</div>
+    <p class="sit-text">
+      Nécessité de centraliser les documents de l'entreprise et de sécuriser les partages pour éviter les échanges de données non maîtrisés (clés USB, mails).
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <p class="sit-text">
+      Installation du rôle Serveur de Fichiers sur Windows Server. Création de l'arborescence et configuration fine des <strong>droits NTFS</strong> (Lecture/Ecriture) selon les groupes utilisateurs Active Directory.
+    </p>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      Espace de stockage collaboratif sécurisé, sauvegardé et accessible selon les droits définis.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.5 Déploiement</span>
+        <span class="skill-tag">B1.1 Patrimoine</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block left-border">
+    <div class="sit-header">
+      <div class="sit-title">Industrialisation de déploiement (Masterisation)</div>
+      <div class="sit-context-badge">🏢 APF France Handicap · 2023</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte</div>
+    <p class="sit-text">
+      L'installation manuelle des nouveaux postes de travail était chronophage et source d'erreurs de configuration.
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <p class="sit-text">
+      Création d'une image "Master" standardisée (OS + Pilotes + Logiciels). Déploiement automatisé de cette image sur le parc informatique cible.
+    </p>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      Gain de temps considérable et homogénéité parfaite du parc informatique.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.1 Gérer le patrimoine</span>
+        <span class="skill-tag">B1.2 Support utilisateur</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-block right-border">
+    <div class="sit-header">
+      <div class="sit-title">Infrastructure Réseau Station F</div>
+      <div class="sit-context-badge">🏫 Projet École</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte</div>
+    <p class="sit-text">
+      Conception de A à Z de l'architecture réseau pour une start-up fictive (simulation professionnelle).
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <ul class="sit-text">
+      <li>Configuration <strong>DHCP</strong> (Scope, réservations).</li>
+      <li>Administration <strong>Active Directory</strong> (GPO, Utilisateurs).</li>
+      <li>Règles de filtrage pare-feu <strong>Stormshield</strong>.</li>
+    </ul>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      Infrastructure livrée fonctionnelle, documentée et sécurisée.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.4 Mode Projet</span>
+        <span class="skill-tag">B1.3 Présence en ligne</span>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="section-block left-border">
+    <div class="sit-header">
+      <div class="sit-title">Étude de Faisabilité Migration Windows 11</div>
+      <div class="sit-context-badge">🏢 Exense · Hiver 2024/25</div>
+    </div>
+   
+    <div class="sit-section-title">1. Contexte & Problématique</div>
+    <p class="sit-text">
+      Anticiper l'obsolescence de Windows 10. L'entreprise a besoin d'un plan de migration structuré et testé pour passer à Windows 11 sans perturber la production.
+    </p>
+
+    <div class="sit-section-title">2. Mon Action</div>
+    <p class="sit-text">
+      J'ai d'abord réalisé un **audit de compatibilité** du parc existant (TPM 2.0, Secure Boot). Ensuite, j'ai créé un plan de déploiement par lot (phase pilote) et testé les applications critiques sous Windows 11 pour identifier les régressions éventuelles.
+    </p>
+
+    <div class="sit-section-title">3. Résultat</div>
+    <p class="sit-text">
+      Un rapport de compatibilité précis a été fourni. Un <strong>script de migration</strong> validé sur un groupe test a permis de planifier le déploiement général futur.
+    </p>
+
+    <div class="skills-container">
+      <div class="skills-label">Compétences validées :</div>
+      <div class="tags-wrapper">
+        <span class="skill-tag">B1.1 Gérer le patrimoine</span>
+        <span class="skill-tag">B1.5 Déploiement</span>
+        <span class="skill-tag">B1.4 Mode projet</span>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align:center; padding:30px 0; color:#888; font-size:14px;">
+    © 2025 — Portfolio de Diego Ortells
+  </footer>
+
+</body>
+</html>
